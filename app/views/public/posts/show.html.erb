@@ -1,0 +1,45 @@
+<h1>体育館詳細</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ユーザー</th>
+      <th>体育館名</th>
+      <th>体育館詳細</th>
+      <th>都道府県</th>
+      <th>住所</th>
+      <th>投稿日</th>
+      <th>コメント数</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= link_to @post.user.name, user_path(@post) %></td>
+      <td><%= @post.title %></td>
+      <td><%= @post.body %></td>
+      <td><%= @post.prefectures %></td>
+      <td><%= @post.domicile %></td>
+      <td><%= @post.created_at.strftime('%Y/%m/%d') %></td>
+      <td><%= @post.post_comments.count %></td>
+      <td>
+        <% if @post.user == current_user %>
+          <td><%= link_to '編集', edit_post_path(@post), class: "btn btn-sm btn-success edit_book_#{@post.id}" %></td>
+          <td><%= link_to '削除', @post, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger destroy_post_#{@post.id}"%></td>
+        <% end %>
+      </td>
+    </tr>
+  </tbpdy>
+</table>
+<div>
+  <% if @post.user == current_user %>
+    <%= link_to "編集", edit_post_path(@post) %>
+      |
+    <%= link_to "削除", post_path(@post), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+  <% end %>
+  
+  <h2>コメント</h2>
+  <%= render 'public/post_comments/index', post: @post %>
+
+  <%= render 'public/post_comments/form', post: @post,post_comment: @post_comment %>
+</div>
+    

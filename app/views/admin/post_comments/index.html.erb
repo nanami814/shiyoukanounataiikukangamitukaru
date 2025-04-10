@@ -1,0 +1,19 @@
+<table>
+  <tbody>
+      <% @post_comments.each do |post_comment| %>
+      <tr>
+        
+        <td>
+            <%= image_tag post_comment.user.get_profile_image(100,100), size: "100x100" %><br>
+            <%= post_comment.user.name %>
+        </td>
+        <td><%= post_comment.comment %></td>
+        <td>
+          
+            <%= link_to "Destroy", admin_post_comment_path(post_comment), method: :delete, class: "btn btn-danger pull-right" %>
+          
+        </td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>

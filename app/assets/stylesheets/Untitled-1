@@ -1,0 +1,2 @@
+scp -i ~/.ssh/practice-aws.pem .env ec2-user@IPアドレス:GitHubのリポジトリ名/
+sed -i '/require "fiber"/a require "logger"' /home/ec2-user/shiyoukanounataiikukangamitukaru/vendor/bundle/ruby/3.1.0/gems/activesupport-6.1.7.10/lib/active_support/logger_thread_safe_level.rb

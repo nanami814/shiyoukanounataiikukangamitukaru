@@ -1,0 +1,16 @@
+<h1>投稿編集</h1>
+<%= form_with model: @book do |f| %>
+  <p>体育館名</p>
+  <%= f.text_field :title %>
+
+  <p>体育館詳細</p>
+  <%= f.text_area :body %>
+  
+  <p>都道府県</p>
+  <%= f.text_field :prefectures %>
+
+  <p>住所</p>
+  <%= f.text_field :domicile %>
+
+  <%= f.submit '編集', class: "btn btn-success" %>
+<% end %>
