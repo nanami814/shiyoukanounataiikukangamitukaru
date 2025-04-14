@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     root to: 'dashboards#index'
     get 'dashboards', to: 'dashboards#index'
     resources :users, only: [:destroy]
-    resources :post_comments, only: [:create, :destroy]
+    resources :post_comments, only: [:index, :create, :destroy]
+    resources :posts, only: [:index, :create, :destroy]
     resource :favorites, only: [:index, :create, :destroy]
   end
 

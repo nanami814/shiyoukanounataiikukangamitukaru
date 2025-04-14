@@ -31,11 +31,6 @@
   </tbpdy>
 </table>
 <div>
-  <% if @post.user == current_user %>
-    <%= link_to "編集", edit_post_path(@post) %>
-      |
-    <%= link_to "削除", post_path(@post), method: :delete, "data-confirm" => "本当に削除しますか？" %>
-  <% end %>
   
   <h2>コメント</h2>
   <%= render 'public/post_comments/index', post: @post %>
