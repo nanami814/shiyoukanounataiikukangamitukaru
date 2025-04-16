@@ -3,5 +3,5 @@
   <%= render 'public/users/index', users: @records %>
 <% elsif @model == 'post' || @model == 'post_prefectures' %>
 	<h3>Posts search for "<%= @content %>"</h3>
-  <%= render 'public/posts/index', posts: @records %>
+  <%= render 'public/posts/index', post: @records %>
 <% end %>
