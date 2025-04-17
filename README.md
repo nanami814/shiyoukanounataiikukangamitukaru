@@ -21,8 +21,10 @@
 ・一緒にスポーツをする人お募集する時
 
 ## 設計書
-
-​
+- [実装機能リスト](https://docs.google.com/spreadsheets/d/13ezJoI0tCD1GO_hIbY4etqeQ__IQvGoa0Du_DxkZMFI/edit?usp=sharing)
+- [画面遷移図](https://app.diagrams.net/#G16zZtStUWL5KsXuecf6QlYvRieLiXe0qB#%7B%22pageId%22%3A%22Nr7q7if0Z8B2Ez5htJ8r%22%7D)
+- [テーブル定義書](https://docs.google.com/spreadsheets/d/1cBld76f7cSJ0lQQuJYwicZ10E0iSdfRMU6U4-lsS3BI/edit?usp=sharing)
+​- [ER図](https://app.diagrams.net/#G1PToI-c49Aky0x545KAtC61t4qqVE51j0#%7B%22pageId%22%3A%22gpFtd9JR8s_4waPyBCWP%22%7D)
 ## 開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
@@ -30,4 +32,3 @@
 - JSライブラリ：jQuery
 - IDE：Cloud9
 ​
-## 使用素材
